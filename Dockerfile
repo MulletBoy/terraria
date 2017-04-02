@@ -1,12 +1,12 @@
 FROM debian:8
 
-MAINTAINER Emil Haugbergsmyr <emil@raeven.net>
+MAINTAINER MulletBoy <terraria@macnet.net.au>
 
 VOLUME ["/world", "/config", "/logs"]
 
 ENV WORLD_NAME docker
-ENV WORLD_SIZE 3
-ENV MAX_PLAYERS 16
+ENV WORLD_SIZE 2
+ENV MAX_PLAYERS 8
 ENV IP 0.0.0.0
 ENV PORT 7777
 
