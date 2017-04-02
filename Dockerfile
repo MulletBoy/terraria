@@ -24,8 +24,8 @@ RUN curl -qL https://github.com/kelseyhightower/confd/releases/download/v0.9.0/c
     mkdir -p /etc/confd/{conf.d,templates}
 
 # Download and install TShock software
-ADD https://github.com/NyxStudios/TShock/releases/download/v4.3.11/tshock_release.zip /
-RUN unzip tshock_release.zip -d /tshock && \
+ADD https://github.com/NyxStudios/TShock/releases/download/v4.3.23/tshock_4.3.23.zip /
+RUN unzip tshock_4.3.23.zip -d /tshock && \
     rm tshock_release.zip
 
 COPY supervisord.tmpl /etc/confd/templates/supervisord.tmpl
