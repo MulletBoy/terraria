@@ -13,7 +13,7 @@ ENV PORT 7777
 # Add mono repository and update os and install required applications
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
     echo "deb http://download.mono-project.com/repo/debian jessie main" | tee /etc/apt/sources.list.d/mono-official.list && \
-    echo "deb http://download.mono-project.com/repo/debian jessie-libjpeg62-compat main" | tee -a /etc/apt/sources.list.d/mono-official.list && \
+   # echo "deb http://download.mono-project.com/repo/debian jessie-libjpeg62-compat main" | tee -a /etc/apt/sources.list.d/mono-official.list && \
     apt-get update && apt-get upgrade -y && \
     apt-get install -yf zip mono-runtime mono-devel supervisor curl && \
     apt-get clean && \
