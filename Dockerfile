@@ -4,7 +4,7 @@ MAINTAINER MulletBoy <terraria@macnet.net.au>
 
 VOLUME ["/world", "/config", "/logs"]
 
-ENV WORLD_NAME docker
+ENV WORLD_NAME journey
 ENV WORLD_SIZE 2
 ENV MAX_PLAYERS 8
 ENV IP 0.0.0.0
@@ -24,9 +24,9 @@ RUN curl -qL https://github.com/kelseyhightower/confd/releases/download/v0.9.0/c
     mkdir -p /etc/confd/{conf.d,templates}
 
 # Download and install TShock software
-ADD https://github.com/Pryaxis/TShock/releases/download/v4.3.26/tshock_4.3.26.zip /
-RUN unzip tshock_4.3.26.zip -d /tshock && \
-    rm tshock_4.3.26.zip
+ADD https://github.com/Pryaxis/TShock/releases/download/v4.4.0-pre2/TShock_4.4.0_226_Pre2_Terraria1.4.0.2.zip /
+RUN unzip TShock_4.4.0_226_Pre2_Terraria1.4.0.2.zip -d /tshock && \
+    rm TShock_4.4.0_226_Pre2_Terraria1.4.0.2.zip
 
 COPY supervisord.tmpl /etc/confd/templates/supervisord.tmpl
 COPY supervisord.toml /etc/confd/conf.d/supervisord.toml
